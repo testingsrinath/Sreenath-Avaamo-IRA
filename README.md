@@ -4,6 +4,7 @@
 ## Table of contents
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Execution video](#Execution-video)
 	
 ## Technologies
 Project is created with:
@@ -30,3 +31,5 @@ To run this project, follow the steps
 * Step 8: Open the project folder downloaded from github
 * Step 9: Add the library in settings robotframework and robotframework-seleniumlibrary
 * Step 10: To run open terminal in pycharm and run the command "robot testcases"
+
+## Execution video
