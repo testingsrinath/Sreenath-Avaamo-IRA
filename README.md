@@ -25,7 +25,7 @@ To run this project, follow the steps
     – pip install robotframework
     – pip install robotframework-seleniumlibrary
     ```
-* Step 6: Download the project for github
+* Step 6: Download the project form github
 * Step 7: open Pycharm
 * Step 8: Open the project folder downloaded from github
 * Step 9: Add the library in settings robotframework and robotframework-seleniumlibrary
