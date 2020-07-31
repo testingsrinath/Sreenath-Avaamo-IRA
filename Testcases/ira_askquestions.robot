@@ -10,7 +10,7 @@ ${browser}      chrome
 ${policy number}        M0012345
 ${vehicle registration number}      HR21AB1010
 ${phone number}     9857689500
-${email address}        sree@
+${email address}        sree@gmail.com
 *** Test Cases ***
 Launch IRA
     click element    ${ira}
