@@ -30,6 +30,8 @@ To run this project, follow the steps
 * Step 7: open Pycharm
 * Step 8: Open the project folder downloaded from github
 * Step 9: Add the library in settings robotframework and robotframework-seleniumlibrary
-* Step 10: To run open terminal in pycharm and run the command "robot testcases"
+* Step 10: To run open terminal in pycharm and run the command "robot testcases", 
+	* To run all testsuites/testcases run command "robot testcases"
+	* To run individual testsuite run individual testsuite, robot testcases/ira.robot and robot testcases/ira_askquestions.robot
 
 ## Execution video
