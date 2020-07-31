@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.7.2 on win32)" generated="20200731 13:41:24.961" rpa="false">
+<suite id="s1" name="Ira Askquestions" source="D:\Python\Projects\Sreenath-Avaamo-IRA\testcases\ira_askquestions.robot">
+<kw name="Open welcome screen" library="resources" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${Url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:25.443" level="INFO">Opening browser 'chrome' to base url 'https://c6.avaamo.com/web_channels/444588bc-92fe-477f-87c1-88a92946346a/demo.html?theme=avm-messenger&amp;banner=true&amp;demo=true&amp;banner_text=%20&amp;banner_title=This%20is%20how%20the%20chat%20agent%20shows%20up'.</msg>
+<status status="PASS" starttime="20200731 13:41:25.443" endtime="20200731 13:41:33.304"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200731 13:41:33.304" endtime="20200731 13:41:34.492"></status>
+</kw>
+<status status="PASS" starttime="20200731 13:41:25.433" endtime="20200731 13:41:34.492"></status>
+</kw>
+<test id="s1-t1" name="Launch IRA">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ira}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:34.495" level="INFO">Clicking element 'class:avaamo__icon'.</msg>
+<status status="PASS" starttime="20200731 13:41:34.494" endtime="20200731 13:41:34.662"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20200731 13:41:34.665" endtime="20200731 13:41:34.667"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${getstarted}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:34.667" level="INFO">Clicking element 'class:get-started-link'.</msg>
+<status status="PASS" starttime="20200731 13:41:34.667" endtime="20200731 13:41:43.974"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${selectframe}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:43.976" level="INFO">Selecting frame 'name:avaamoIframe'.</msg>
+<status status="PASS" starttime="20200731 13:41:43.976" endtime="20200731 13:41:44.088"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200731 13:41:49.093" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200731 13:41:44.088" endtime="20200731 13:41:49.093"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${switchtotype}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:49.096" level="INFO">Clicking element 'xpath://div[@title='Switch to typing']'.</msg>
+<status status="PASS" starttime="20200731 13:41:49.093" endtime="20200731 13:41:49.331"></status>
+</kw>
+<status status="PASS" starttime="20200731 13:41:34.492" endtime="20200731 13:41:49.336" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Question 1: Ask ira to renew">
+<kw name="Renew policy" library="resources">
+<arguments>
+<arg>${policy number}</arg>
+<arg>${vehicle registration number}</arg>
+<arg>${phone number}</arg>
+<arg>${email address}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_text}</arg>
+<arg>I need to renew my motor policy</arg>
+</arguments>
+<msg timestamp="20200731 13:41:49.341" level="INFO">Typing text 'I need to renew my motor policy' into text field 'xpath://textarea[contains(@dir,'auto')]'.</msg>
+<status status="PASS" starttime="20200731 13:41:49.341" endtime="20200731 13:41:49.843"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_send_button}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:49.846" level="INFO">Clicking element 'xpath://div[@class='ptr locale-trans send enabled'][contains(.,'Send')]'.</msg>
+<status status="PASS" starttime="20200731 13:41:49.843" endtime="20200731 13:41:50.008"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>8-digit policy number</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20200731 13:41:50.008" endtime="20200731 13:41:51.955"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_text}</arg>
+<arg>${policy number}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:51.955" level="INFO">Typing text 'M0012345' into text field 'xpath://textarea[contains(@dir,'auto')]'.</msg>
+<status status="PASS" starttime="20200731 13:41:51.955" endtime="20200731 13:41:52.175"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_send_button}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:52.175" level="INFO">Clicking element 'xpath://div[@class='ptr locale-trans send enabled'][contains(.,'Send')]'.</msg>
+<status status="PASS" starttime="20200731 13:41:52.175" endtime="20200731 13:41:52.323"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Can you help me with your vehicle registration number?</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20200731 13:41:52.323" endtime="20200731 13:41:53.743"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_text}</arg>
+<arg>${vehicle registration number}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:53.746" level="INFO">Typing text 'HR21AB1010' into text field 'xpath://textarea[contains(@dir,'auto')]'.</msg>
+<status status="PASS" starttime="20200731 13:41:53.743" endtime="20200731 13:41:54.003"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_send_button}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:54.006" level="INFO">Clicking element 'xpath://div[@class='ptr locale-trans send enabled'][contains(.,'Send')]'.</msg>
+<status status="PASS" starttime="20200731 13:41:54.003" endtime="20200731 13:41:54.123"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Can you help me with your registered phone number?</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20200731 13:41:54.123" endtime="20200731 13:41:55.808"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_text}</arg>
+<arg>${phone number}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:55.808" level="INFO">Typing text '9857689500' into text field 'xpath://textarea[contains(@dir,'auto')]'.</msg>
+<status status="PASS" starttime="20200731 13:41:55.808" endtime="20200731 13:41:56.113"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_send_button}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:56.116" level="INFO">Clicking element 'xpath://div[@class='ptr locale-trans send enabled'][contains(.,'Send')]'.</msg>
+<status status="PASS" starttime="20200731 13:41:56.116" endtime="20200731 13:41:56.241"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Can you help me with your email address?</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20200731 13:41:56.241" endtime="20200731 13:41:56.829"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_text}</arg>
+<arg>${email address}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:56.830" level="INFO">Typing text 'sree@' into text field 'xpath://textarea[contains(@dir,'auto')]'.</msg>
+<status status="PASS" starttime="20200731 13:41:56.829" endtime="20200731 13:41:57.030"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_send_button}</arg>
+</arguments>
+<msg timestamp="20200731 13:41:57.030" level="INFO">Clicking element 'xpath://div[@class='ptr locale-trans send enabled'][contains(.,'Send')]'.</msg>
+<status status="PASS" starttime="20200731 13:41:57.030" endtime="20200731 13:41:57.200"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200731 13:42:02.202" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200731 13:41:57.200" endtime="20200731 13:42:02.202"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${yes}</arg>
+</arguments>
+<msg timestamp="20200731 13:42:02.202" level="INFO">Clicking element 'xpath://a[contains(@title,'Yes')]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200731 13:42:07.614" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200731 13:42:07.247" endtime="20200731 13:42:07.614"></status>
+</kw>
+<msg timestamp="20200731 13:42:07.619" level="FAIL">Element with locator 'xpath://a[contains(@title,'Yes')]' not found.</msg>
+<status status="FAIL" starttime="20200731 13:42:02.202" endtime="20200731 13:42:07.619"></status>
+</kw>
+<status status="FAIL" starttime="20200731 13:41:49.338" endtime="20200731 13:42:07.619"></status>
+</kw>
+<status status="FAIL" starttime="20200731 13:41:49.338" endtime="20200731 13:42:07.619" critical="yes">Element with locator 'xpath://a[contains(@title,'Yes')]' not found.</status>
+</test>
+<test id="s1-t3" name="Question 2:">
+<kw name="What are the different modes of payment to purchase travel insurance?" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200731 13:42:12.626" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200731 13:42:07.624" endtime="20200731 13:42:12.626"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_text}</arg>
+<arg>What are the different modes of payment to purchase travel insurance?</arg>
+</arguments>
+<msg timestamp="20200731 13:42:12.626" level="INFO">Typing text 'What are the different modes of payment to purchase travel insurance?' into text field 'xpath://textarea[contains(@dir,'auto')]'.</msg>
+<status status="PASS" starttime="20200731 13:42:12.626" endtime="20200731 13:42:14.028"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_send_button}</arg>
+</arguments>
+<msg timestamp="20200731 13:42:14.028" level="INFO">Clicking element 'xpath://div[@class='ptr locale-trans send enabled'][contains(.,'Send')]'.</msg>
+<status status="PASS" starttime="20200731 13:42:14.028" endtime="20200731 13:42:14.171"></status>
+</kw>
+<status status="PASS" starttime="20200731 13:42:07.624" endtime="20200731 13:42:14.171"></status>
+</kw>
+<status status="PASS" starttime="20200731 13:42:07.621" endtime="20200731 13:42:14.173" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Question 3:">
+<kw name="how health insurance differs from life insurance?" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200731 13:42:17.183" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200731 13:42:14.178" endtime="20200731 13:42:17.183"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_text}</arg>
+<arg>how health insurance differs from life insurance?</arg>
+</arguments>
+<msg timestamp="20200731 13:42:17.186" level="INFO">Typing text 'how health insurance differs from life insurance?' into text field 'xpath://textarea[contains(@dir,'auto')]'.</msg>
+<status status="PASS" starttime="20200731 13:42:17.183" endtime="20200731 13:42:18.475"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_send_button}</arg>
+</arguments>
+<msg timestamp="20200731 13:42:18.475" level="INFO">Clicking element 'xpath://div[@class='ptr locale-trans send enabled'][contains(.,'Send')]'.</msg>
+<status status="PASS" starttime="20200731 13:42:18.475" endtime="20200731 13:42:18.595"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200731 13:42:23.600" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200731 13:42:18.598" endtime="20200731 13:42:23.600"></status>
+</kw>
+<status status="PASS" starttime="20200731 13:42:14.178" endtime="20200731 13:42:23.600"></status>
+</kw>
+<status status="PASS" starttime="20200731 13:42:14.176" endtime="20200731 13:42:23.602" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Question 4:">
+<kw name="How do I contact you?" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200731 13:42:28.610" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200731 13:42:23.607" endtime="20200731 13:42:28.610"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_text}</arg>
+<arg>How do I contact you?</arg>
+</arguments>
+<msg timestamp="20200731 13:42:28.610" level="INFO">Typing text 'How do I contact you?' into text field 'xpath://textarea[contains(@dir,'auto')]'.</msg>
+<status status="PASS" starttime="20200731 13:42:28.610" endtime="20200731 13:42:29.294"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_send_button}</arg>
+</arguments>
+<msg timestamp="20200731 13:42:29.294" level="INFO">Clicking element 'xpath://div[@class='ptr locale-trans send enabled'][contains(.,'Send')]'.</msg>
+<status status="PASS" starttime="20200731 13:42:29.294" endtime="20200731 13:42:29.432"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200731 13:42:32.433" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200731 13:42:29.432" endtime="20200731 13:42:32.433"></status>
+</kw>
+<status status="PASS" starttime="20200731 13:42:23.607" endtime="20200731 13:42:32.433"></status>
+</kw>
+<status status="PASS" starttime="20200731 13:42:23.605" endtime="20200731 13:42:32.433" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Question 5:">
+<kw name="how to intimate a claim?" library="resources">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200731 13:42:35.438" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200731 13:42:32.438" endtime="20200731 13:42:35.438"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_text}</arg>
+<arg>how to intimate a claim?</arg>
+</arguments>
+<msg timestamp="20200731 13:42:35.438" level="INFO">Typing text 'how to intimate a claim?' into text field 'xpath://textarea[contains(@dir,'auto')]'.</msg>
+<status status="PASS" starttime="20200731 13:42:35.438" endtime="20200731 13:42:36.192"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${click_send_button}</arg>
+</arguments>
+<msg timestamp="20200731 13:42:36.192" level="INFO">Clicking element 'xpath://div[@class='ptr locale-trans send enabled'][contains(.,'Send')]'.</msg>
+<status status="PASS" starttime="20200731 13:42:36.192" endtime="20200731 13:42:36.342"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200731 13:42:41.344" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200731 13:42:36.342" endtime="20200731 13:42:41.344"></status>
+</kw>
+<status status="PASS" starttime="20200731 13:42:32.438" endtime="20200731 13:42:41.344"></status>
+</kw>
+<status status="PASS" starttime="20200731 13:42:32.435" endtime="20200731 13:42:41.344" critical="yes"></status>
+</test>
+<kw name="Close the browser" library="resources" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200731 13:42:41.352" endtime="20200731 13:42:44.979"></status>
+</kw>
+<status status="PASS" starttime="20200731 13:42:41.352" endtime="20200731 13:42:44.979"></status>
+</kw>
+<status status="FAIL" starttime="20200731 13:41:24.961" endtime="20200731 13:42:44.979"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="1">Critical Tests</stat>
+<stat pass="5" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="1" id="s1" name="Ira Askquestions">Ira Askquestions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
